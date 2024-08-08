@@ -1,0 +1,76 @@
+#include<stdio.h>
+
+int main () {
+	
+	// int umur = 10;
+	
+	//printf("Hello World!\nasd"); // \n <--- fungsi tanda itu untuk menambah baris baru
+	// printf lebih tepatnya fungsinya untuk mengeluarkan atau mencetak suatu inputan
+	
+	//scanf()
+	
+	// contoh dengan inputan
+	// printf("Umur Kamu = %d", umur); // printf itu kepanjangan dari print format, jadi setelah sama dengan tampilkan
+							// tipe data dari integer maksudnya ini tempat buat menampilkan data dari variabel integer
+							// yang disini adalah %d yang merupakan format integer, dilanjutkan setelah tanda " terus tanda ',' kemudian nama variabel
+							// dari integer
+							
+	// contoh lagi untuk melihat penggunaan variabel lainnya
+	int angkaBulat = 10;
+	float angkaKoma = 1.5f;
+	char karakter = 'a';
+	char string[100] = "hello"; // untuk string sama memakai char tapi harus di sisipkan berapa maksimal huruf
+							// yang bisa di tampung
+	
+	// untuk format print nya
+//	printf("%d\n", angkaBulat); // integer
+//	printf("%f\n", angkaKoma); // float
+//	printf("%.2f\n", angkaKoma); // ini contoh float yang koma itu, jika ingin menampilkan yang dibelakang
+								// koma hanya 2 angka, jika ingin 3, 4 / 5 angka di belakang koma, tinggal
+								// ganti saja angkanya, sesuai berapa jumlah angka dibelakang koma yang di inginkan
+//	printf("%c\n", karakter); // char, karakter per karakter
+//	printf("%s\n", string); // string
+	
+	// contoh cara penginputan
+	int angkaBulatisi; // kondisi lagi jikalau variabel ini sudah di isi diawal semisal jadi int angkaBulatisi = 10; dan ada syntax scanf dibawah
+					// data 10 tersebut tidak akan di eksekusi dan akan di timpa data hasil inputan scanf, berlaku juga dengan variabel yang lainnya
+	float angkaKomaisi;
+	
+	char karakterIsi;
+	
+	char stringIsi[100];
+	
+	scanf("%d", &angkaBulatisi); // scanf maksudnya meng-scan, jadi inputan akan di isi di %d
+							// dan inputan itu akan di pindah ke angkaBulatisi melalui tanda "&"
+							// ibarat tanda "&" sebagai penjembatan, %d di input dengan angka, 
+							// dikirim ke variabel integer angkaBulatisi melalui &
+	printf("%d\n", angkaBulatisi);
+	
+	printf("\n");
+	
+	// contoh dengan inputan koma
+	scanf("%f", &angkaKomaisi); 
+	printf("%.3f \n", angkaKomaisi); // disini akan mencoba membuat bilangan koma dengan angka di belakang koma berjumlah 3 angka di belakang koma
+	
+	// contoh dengan inputan karakter
+	getchar(); //untuk yang char ini ada hal khusus, ada yang namanya input stream, input stream itu seperti kurir yang mengirimkan perintah dari keyboard
+			// pada keyboard kita memencet inputan keyboard tersebut akan di kirimkan yang disebut dengan input stream ke dalam program
+			// dan untuk kasus char segala bentuk karakter berlaku termasuk klik enter, ambil contoh cetakan dan inputan sebelumnya yaitu inputan angka koma
+			// ketika scanf di eksekusi program akan meminta inputan, pasti setelah input kemudian akan di enter, dan enter yang di klik itu masuk kategori karakter pada %c
+			// setelah user meng-enter otomatis sistem akan mengira itu inputan dan langsung memasukkan klik enter tadi setelah user nginput di scanf %f, klik enter otomatis masuk pada scanf %c
+			// dan ketika di compile dan run, program seakan meng-skip inputan dari karakter padahal sebenarnya sudah di masukkan oleh klik enter sebelumnyak
+			// jadi seolah olah tidak di isi apapun padahal sudah terisi klik enter sesudah scanf %f meng-scan angka koma
+	
+	scanf("%c", &karakterIsi);
+	printf("%c", karakterIsi);
+	
+	printf("\n");
+	
+	
+	scanf("%s", stringIsi); // beda dengan variabel yang lain, untuk string pakai maupun tidak pakai "&" masih bisa digunakan dan tidak mengalami error, karena string memiliki pointer nya sendiri
+	
+	
+	printf("%s", stringIsi);
+	
+	return 0;
+}
