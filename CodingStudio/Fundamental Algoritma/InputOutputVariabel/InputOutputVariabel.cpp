@@ -68,7 +68,9 @@ int main () {
 	
 	
 	scanf("%s", stringIsi); // beda dengan variabel yang lain, untuk string pakai maupun tidak pakai "&" masih bisa digunakan dan tidak mengalami error, karena string memiliki pointer nya sendiri
-	
+			// yaitu nama dari variabel nya udah menjadi wakil sebagai "&", nama variabel yang disini adalah stringIsi udah dijadikan pointer
+			// untuk string disini bisa disebut array of character
+			// disini "stringIsi" bisa di sebut dengan array pertama sebagai wakil untuk mengetahui karakter karakter lainnya, jadi tidak perlu perantara seperti "&"
 	
 	printf("%s", stringIsi);
 	
