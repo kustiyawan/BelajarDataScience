@@ -72,7 +72,25 @@ int main () {
 			// untuk string disini bisa disebut array of character
 			// disini "stringIsi" bisa di sebut dengan array pertama sebagai wakil untuk mengetahui karakter karakter lainnya, jadi tidak perlu perantara seperti "&"
 
-	// untuk cara scanf yang hanya memakai %s ada kelemahan 
+	// untuk cara scanf yang hanya memakai %s ada kelemahan, jikalau user ingin menginput 2 kata atau lebih, semisal "kawan lama", print yang ditampilkan cuma di "kawan" saja
+	// karena fungsi scanf dengan format "%s" hanya membaca input hingga menemukan spasi atau whitespace (spasi, tab, atau newline). 
+	// Jadi, ketika kamu memasukkan "kawan lama", scanf hanya membaca "kawan" dan berhenti di spasi, sehingga hanya "kawan" yang tercetak.
+
+	getchar();		
+	// ada dua cara agar inputan bisa 1 kata lebih 
+	
+	// pertama
+	// scanf("%[^\n]", stringIsi);
+	
+	// kedua 
+	fgets(stringIsi, sizeof(stringIsi), stdin);
+	
+	// untuk perbedaannya kentaranya 
+		// scanf("%[^\n]"): Tidak menyimpan newline (\n) di akhir string, jadi hasil cetakan tidak akan memiliki baris kosong tambahan setelahnya. 
+		// Namun, jika ada input berikutnya menggunakan scanf, karakter newline bisa menyebabkan masalah.
+		
+		// fgets: Menyimpan newline (\n) di akhir string jika ada tempat yang cukup di buffer. Ini bisa menyebabkan hasil cetakan menampilkan baris kosong setelah teks, 
+		// karena newline diinterpretasikan sebagai perintah untuk memindahkan kursor ke baris berikutnya.
 	
 	printf("%s", stringIsi);
 	
